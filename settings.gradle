@@ -1,0 +1,4 @@
+include ':lib_huawei_hms_core'
+include ':module_ui'
+include ':app'
+rootProject.name = "MyDiary-Android"
