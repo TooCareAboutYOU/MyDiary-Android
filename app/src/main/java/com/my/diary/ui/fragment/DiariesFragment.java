@@ -14,6 +14,7 @@ import com.my.diary.util.FlashUtils;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.fragment.app.Fragment;
 
 
@@ -34,6 +35,7 @@ public class DiariesFragment extends Fragment {
                              Bundle savedInstanceState) {
         mRootView=inflater.inflate(R.layout.fragment_diaries, container, false);
         this.acBtnLight=mRootView.findViewById(R.id.acBtnLight);
+        ((AppCompatTextView)mRootView.findViewById(R.id.acTxt)).setText(DiariesFragment.class.getName()+"\n"+DiariesFragment.class.getSimpleName());
 
         this.mController.setDiariesListView(mRootView.findViewById(R.id.recyclerView_diaries));
         init();
